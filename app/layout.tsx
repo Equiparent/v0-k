@@ -1,12 +1,14 @@
 import type React from "react"
-import "../styles/globals.css"
+import type { Metadata } from "next"
 import { Inter } from "next/font/google"
+import "./globals.css"
 
 const inter = Inter({ subsets: ["latin"] })
 
-export const metadata = {
-  title: "Coparenting App",
-  description: "Una aplicación para facilitar la coparentalidad",
+export const metadata: Metadata = {
+  title: "Co-Parenting App",
+  description: "Por una infancia al centro y libre de conflictos",
+    generator: 'v0.dev'
 }
 
 export default function RootLayout({
@@ -16,7 +18,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="es">
-      <body className={inter.className}>{children}</body>
+      <body className={`${inter.className} bg-black text-white`}>{children}</body>
     </html>
   )
 }
